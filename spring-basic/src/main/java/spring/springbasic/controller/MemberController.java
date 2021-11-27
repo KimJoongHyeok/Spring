@@ -28,6 +28,7 @@ public class MemberController {
     @Autowired  //MemberController에 MemberService 를 연결 ,DI,의존관계 주입
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberService  = " + memberService.getClass());
     }
     
     @GetMapping("/members/new")
